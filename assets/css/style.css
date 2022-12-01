@@ -91,7 +91,6 @@ nav .container-fluid {
 
 .navbar-nav li a:hover::before {
     transform: scaleX(1);
-
 }
 
 .navbar p {

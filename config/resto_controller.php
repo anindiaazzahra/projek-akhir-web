@@ -98,9 +98,9 @@ function put_resto($post) {
     $img = $imgLama;
     $query = "UPDATE resto SET nama_resto = '$nama_resto', alamat = '$alamat', jam_buka = '$jam_buka', jam_tutup = '$jam_tutup', rating = '$rating', harga = '$harga' WHERE id = $id";
   } else {
+    $img = upload_img();
     // menghapus gambar lama
     unlink('../assets/img/' . $imgLama);
-    $img = upload_img();
     $query = "UPDATE resto SET img = '$img', nama_resto = '$nama_resto', alamat = '$alamat', jam_buka = '$jam_buka', jam_tutup = '$jam_tutup', rating = '$rating', harga = '$harga' WHERE id = $id";
   }
 
@@ -162,7 +162,7 @@ function upload_img() {
   if (!in_array($ekstensifile, $ekstensifileValid)) {
     echo "<script>
             alert('Format File Tidak Valid!');
-            // document.location.href = 'edit_resto.php';
+            document.location.href = 'resto.php';
           </script>";
     die();
   }
@@ -171,7 +171,7 @@ function upload_img() {
   if ($ukuranFile > 5000000) {
     echo "<script>
             alert('Ukuran File Terlalu Besar!');
-            document.location.href = 'edit_resto.php';
+            document.location.href = 'resto.php';
           </script>";
     die();
   }

@@ -3,7 +3,7 @@
 $hostname	= "localhost";
 $username	= "root";
 $password	= "";
-$database	= "aaa";
+$database	= "db_kakilima";
 
 $db = new mysqli($hostname, $username, $password, $database);
 
