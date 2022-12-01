@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.logo {
+    position: absolute;
+    top: 32px;
+    left: 60px;
+    z-index: 99;
+}
+
+nav {
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    position: fixed;
+    margin: 0;
+    padding: 0 60px;
+    background-color: #ffffff;
+}
+
+nav .container-fluid {
+    margin: 0 60px;
+    padding-right: 0;
+}
+
+.navbar-nav {
+    margin: 20px 0px 20px 320px;
+}
+
+.navbar-nav li {
+    margin: 5px 20px
+}
+
+.navbar-nav li a {
+    color: #676767;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    font-style: bold;
+    text-decoration: none;
+    padding: 0 5px;
+    position: relative;
+}
+
+.navbar-nav li a:hover {
+    color: #676767;
+}
+
+.navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #676767;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav li a:hover::before {
+    transform: scaleX(1);
+
+}
+
+.navbar p {
+    margin: 0;
+}
+
+.navbar p a {
+    margin: auto;
+    color: #676767;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    font-style: bold;
+    text-decoration: none;
+    padding: 0 20px;
+    border: 1px solid #676767;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.navbar p a:hover {
+    color: #b9b8b8d3;
+    border: 1px solid #b9b8b8d3;
+}
+
+.signed-in {
+    list-style-type: none;
+    color: #676767;
+    padding: 0;
+    margin: 0;
+}
+
+.signed-in .d-add {
+    position: absolute;
+    z-index: 999;
+    right: 130px;
+    top: 32px;
+    margin: 0;
+}
+
+.signed-in i {
+    padding-left: 100px;
+    margin: 0;
+}
+
+.signed-in .profil {
+    font-size: 36px;
+}
+
+
+.signed-in .add {
+    font-size: 22px;
+    padding-left: 150px;
+}
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.dropdown-menu p {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.dropdown-menu a {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.dropdown-menu h6 {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+.container-fluids {
+    margin: 100px 60px;
+    height: auto;
+}
+
+#recommendations {
+    height: auto;
+}
+
+h1 {
+    color: #101820;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 48px;
+    margin: 22px 0 34px;
+}
+
+#recommendations .card {
+    border-radius: 16px;
+    height: 320px;
+}
+
+#recommendations .card img {
+    display: block;
+    margin: 8px auto;
+    width: 94%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+#recommendations .row .a-card {
+    display: block;
+    text-decoration: none;
+    color: #101820;
+}
+
+#recommendations .row .a-card:hover {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#recommendations h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 10px 0 5px;
+}
+
+#recommendations p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+}
+
+#recommendations .card .card-body {
+    padding: 0px 20px;
+}
+
+#recommendations .rating  {
+    border-radius: 25px;
+    padding: 4px 10px;
+    width: fit-content;
+    height: 26px;
+    position: absolute;
+    background-color: white;
+    margin: 156px 0 0 214px;
+}
+
+#recommendations .rating .bi {
+    color: #FFC41C;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+#recommendations .rating p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1c1d1d;
+}
+
+#recommendations .a-button {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #00880d;
+    background: #EAFFEA;
+    padding: 12px 16px;
+    margin: 12px 480px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+#recommendations .a-button:hover {
+    background: #D3FFD3;
+}
+
+footer .container-fluids{
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: #101820;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    height: 80px;
+}
+
+
