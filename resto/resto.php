@@ -40,10 +40,10 @@ $data_resto = get_all_resto();
                 <a href="../index.php">Home</a> 
               </li>
               <li class="nav-item">
-                <a href="../index.php#about">About</a>
+                <a aria-current="page" href="../index.php#recommendations">Recommendations</a>
               </li>
               <li class="nav-item">
-                <a aria-current="page" href="../index.php#recommendations">Recommendations</a>
+                <a href="../index.php#about">About</a>
               </li>
               <li class="nav-item">
                 <a href="../index.php#contact">Contact</a>
