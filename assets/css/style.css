@@ -420,6 +420,11 @@ nav .container-fluid {
     font-size: 18px;
 }
 
+.contact-social .bi:hover {
+    color: #383737;
+    font-size: 18px;
+}
+
 input, textarea {
     display: block;
     border: 1px solid #ccd1d6;
@@ -427,7 +432,7 @@ input, textarea {
     width: 100%;
 }
 
-input:focus, textarea:focus {
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
     outline: none;
     border-bottom: 1px solid #00880D; 
     -webkit-border-bottom-radius: 4px;

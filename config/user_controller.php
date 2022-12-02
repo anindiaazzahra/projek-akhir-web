@@ -48,22 +48,22 @@ function register_user($post) {
   $password = strip_tags($post['password']);
   $id_role  = strip_tags($post['id_role']);
 
-  $check_username = get_user_by_username($username);
-
-  if (empty($check_username)) {
-    // hash password
-    $password = password_hash($password, PASSWORD_DEFAULT);
-
-    // query tambah user
-    $query = "INSERT INTO user VALUES (NULL, '$username', '$password', '$id_role')";
-
-    mysqli_query($db, $query);
-
-    return mysqli_affected_rows($db);
-
-  } else {
-    header("Location: register.php?message=username_terpakai");
+  // cek apakah username sudah ada di database
+  $result = get_user_by_username($username);
+  if (mysqli_num_rows($result) > 0) {
+    header("location: register.php?message=username_terpakai");
+    return false;
   }
+
+  // hash password
+  $password = password_hash($password, PASSWORD_DEFAULT);
+
+  // query tambah user
+  $query = "INSERT INTO user VALUES (NULL, '$username', '$password', '$id_role')";
+
+  mysqli_query($db, $query);
+
+  return mysqli_affected_rows($db);
 }
 
 

@@ -47,10 +47,10 @@ include "../config/star_rating.php";
                 <a href="../index.php">Home</a> 
               </li>
               <li class="nav-item">
-                <a href="../index.php#about">About</a>
+                <a aria-current="page" href="resto.php">Recommendations</a>
               </li>
               <li class="nav-item">
-                <a aria-current="page" href="../index.php#recommendations">Recommendations</a>
+                <a href="../index.php#about">About</a>
               </li>
               <li class="nav-item">
                 <a href="../index.php#contact">Contact</a>
@@ -122,7 +122,9 @@ include "../config/star_rating.php";
                 <?php 
               if ($_SESSION['role'] == "Admin") {
                 echo "<a href='edit_resto.php?id=$resto[id]'><i class='bi bi-pencil-square action-btn'></i></a>";
-                echo "<a href='delete_resto.php?id=$resto[id]' onclick='return confirm('Yakin untuk menghapus?')';><i class='bi bi-trash3-fill action-btn'></i></a>";
+                ?>
+                <a href="delete_resto.php?id=<?=$resto['id']; ?>" onclick='return confirm("Yakin untuk menghapus?")';><i class="bi bi-trash3-fill action-btn"></i></a>
+                <?php
               }
               ?>
             </div>
@@ -151,7 +153,9 @@ include "../config/star_rating.php";
             <?php 
             if ($review['id_user'] == $_SESSION['id']) {
               echo "<a href='../review/edit_review.php?id_resto=$id_resto&id_review=$review[id]'><i class='bi bi-pencil-square action-btn'></i></a>";
-              echo "<a href='../review/delete_review.php?id_resto=$id_resto&id_review=$review[id]' onclick='return confirm('Yakin untuk menghapus?')';><i class='bi bi-trash3-fill action-btn'></i></a>";
+              ?>
+              <a href="../review/delete_review.php?id_resto=<?=$id_resto; ?>&id_review=<?=$review['id']; ?>" onclick='return confirm("Yakin untuk menghapus?")';><i class='bi bi-trash3-fill action-btn'></i></a>
+              <?php
             }
             ?>
             </div>

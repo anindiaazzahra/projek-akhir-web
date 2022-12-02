@@ -9,7 +9,10 @@ $data_role = get_all_role();
 if (isset($_POST['register'])) {
   if (register_user($_POST) > 0) {
     header("location: login.php?location=index.php");
-    exit;
+  } else {
+    echo "<script>
+    alert('Register Gagal!');
+    </script>";
   }
 }
 

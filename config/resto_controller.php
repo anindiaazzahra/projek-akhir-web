@@ -117,7 +117,6 @@ function put_rating_resto($id) {
   // query update rating
   $query = "UPDATE resto SET rating = (SELECT AVG(rating) FROM review WHERE id_resto = $id) WHERE id = $id";
 
-
   mysqli_query($db, $query);
 
   return mysqli_affected_rows($db);

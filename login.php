@@ -61,7 +61,7 @@ if (isset($_POST['login'])) {
       <?php
       if (isset($_GET['message'])) {
           if ($_GET['message'] == 'gagal') {
-              echo "<h5> Incorrect username or password </h5>";
+              echo "<h5 class='text-danger'> Incorrect username or password </h5>";
           } elseif($_GET['message'] == 'logout') {
               echo "<h5> You have successfully sign out </h5>";
           } elseif($_GET['message'] == 'belum_login') {

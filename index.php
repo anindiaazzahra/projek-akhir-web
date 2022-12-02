@@ -6,6 +6,14 @@ if(empty($_SESSION['login'])){
   $_SESSION['login'] = false;
 }
 
+if (isset($_GET['message'])) {
+  if ($_GET['message'] == 'logout') {
+      echo "<script>
+      alert('You have successfully signed out.');
+      </script>";
+  }
+}
+
 include "config/resto_controller.php";
 
 $data_resto = get_resto_by_rating();
@@ -40,10 +48,10 @@ $data_resto = get_resto_by_rating();
                 <a aria-current="page" href="#home">Home</a> 
               </li>
               <li class="nav-item">
-                <a href="#about">About</a>
+                <a href="#recommendations">Recommendations</a>
               </li>
               <li class="nav-item">
-                <a href="#recommendations">Recommendations</a>
+                <a href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a href="#contact">Contact</a>
@@ -218,10 +226,10 @@ $data_resto = get_resto_by_rating();
                 <h5>Follow Us</h5>
                 </div>
                 <ul class="contact-social">
-                  <li class="ib"><a href=""><i class="bi bi-instagram"></i></a></li>
-                  <li class="ib"><a href=""><i class="bi bi-twitter"></i></a></li>
-                  <li class="ib"><a href=""><i class="bi bi-facebook"></i></a></li>
-                  <li class="ib"><a href=""><i class="bi bi-youtube"></i></a></li>            
+                  <li class="ib"><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>
+                  <li class="ib"><a href="https://twitter.com/"><i class="bi bi-twitter"></i></a></li>
+                  <li class="ib"><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
+                  <li class="ib"><a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a></li>            
                 </ul>
             </div>
           </div>

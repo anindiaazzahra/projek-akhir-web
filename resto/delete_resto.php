@@ -15,7 +15,9 @@ $id_resto = (int)$_GET['id'];
 if (delete_resto($id_resto) > 0) {
     header("location: resto.php");
   } else {
-    echo "Delete Data Gagal.";
+    echo "<script>
+    alert('Delete Data Gagal!');
+    </script>";
   }
 
 
